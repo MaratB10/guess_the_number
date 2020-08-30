@@ -24,10 +24,22 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+
+
         for (int i = 1; i <= 3; i++) {
             System.out.println("------------------");
             System.out.println("Попытка №" + i);
+
+
+            if(!scanner.hasNextInt()) {
+                System.out.println("Было введено не числовое значение!");
+                scanner.nextLine();
+                System.out.println("Вы проиграли!!!");
+                break;
+            }
+
             int input_number = scanner.nextInt();
+
             if (input_number == number){
                 System.out.println("Вы угадали!!!");
                 break;
